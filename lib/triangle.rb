@@ -12,8 +12,10 @@ class Triangle
       @type = :equilateral 
     elsif @side_1 == @side_2 || @side_2 == @side_3 || @side_3 == @side_1
       @type = :isosceles
-    else @side_1 > @side_2 || @side_2 > @side_3 
+    elsif @side_1 > @side_2 || @side_2 > @side_3 
       @type = :scalene
+    else @side_1 == 0 || @side_2 == 0 || @side_3 == 0 
+      raise TriangeError 
     end 
   end 
 end
