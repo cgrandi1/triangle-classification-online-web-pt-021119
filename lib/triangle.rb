@@ -12,8 +12,8 @@ class Triangle
       @type = :equilateral 
     elsif @side_1 == @side_2 && @side_3 > @side_2
       @type = :isosceles
-    elsif @side_1 > @side_2 || @side_2 > @side_3
-    
+    else @side_1 > @side_2 || @side_2 > @side_3 
+      @type = :scalene
+    end 
   end 
-  
 end
